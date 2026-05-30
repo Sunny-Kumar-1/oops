@@ -18,9 +18,9 @@ class chater:
         elif user_input == "2":
             self.signin()
         elif user_input == "3":
-            pass
+            self.my_post()
         elif user_input == "4":
-            pass
+            self.my_msg()
         else:
             exit()
         
@@ -41,9 +41,28 @@ class chater:
             password = input("enter password")
             if self.username == email and self.password == password:
                 print("sign in successfully ")
+                self.loggedin=True
             else:
                 print("enter right credentials")
         self.menu()
+
+    def my_msg(self):
+        if self.loggedin == True:
+            receiver= input("whom u wnat to msg")
+            my_msg = input("emnter msg")
+            print(f"msg sent to {receiver}")
+        else:
+            print("log in first")
+        self.menu()
+    
+    def my_post(self):
+        if self.loggedin == True:
+            post= input("what u wnat to post")
+            print(f"posted sucessfully {post}")
+        else:
+            print("log in first")
+        self.menu()
+
 
 
 obj = chater()
