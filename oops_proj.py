@@ -14,9 +14,9 @@ class chater:
                             5. press 5 to exit""")
 
         if user_input == "1":
-            pass
+            self.signup()
         elif user_input == "2":
-            pass
+            self.signin()
         elif user_input == "3":
             pass
         elif user_input == "4":
@@ -24,4 +24,26 @@ class chater:
         else:
             exit()
         
+    def signup(self):
+        email=input("enter email")
+        password = input("enter password")
+        self.username = email
+        self.password = password
+        print("singhed up successfully!!!")
+        print("\n")
+        self.menu()
+    
+    def signin(self): 
+        if self.username=="" and self.password=="":
+            print("signup first")
+        else:
+            email=input("enter email")
+            password = input("enter password")
+            if self.username == email and self.password == password:
+                print("sign in successfully ")
+            else:
+                print("enter right credentials")
+        self.menu()
+
+
 obj = chater()
