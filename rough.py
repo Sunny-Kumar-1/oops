@@ -3,3 +3,6 @@ my_str = "mlops playlist"
 my_int = 112
 
 print(type(my_str))
+
+from oops_proj import chater
+a = chater.menu()
