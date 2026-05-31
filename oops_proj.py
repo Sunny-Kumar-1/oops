@@ -63,6 +63,9 @@ class chater:
             print("log in first")
         self.menu()
 
+    @staticmethod
+    def set_no(self):
+        exit()
 
 
 obj = chater()
