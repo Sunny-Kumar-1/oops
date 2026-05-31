@@ -1,17 +1,21 @@
 class chater:
+
+    counting = 0
+    
     def __init__(self):
+        counting += 1
         self.username = ""
         self.password = ""
         self.loggedin = "false"
         self.menu()
 
     def menu(self):
-        user_input = input("""welcome to chater how you want to proceed?
+        user_input = input(f"""welcome to chater how you want to proceed?
                             1.press 1 to sign up
                             2. press 2 to sign in 
                             3. press 3 to post
                             4. press 4 to send message
-                            5. press 5 to exit""")
+                            5. press 5 to exit /n """)
 
         if user_input == "1":
             self.signup()
